@@ -1,16 +1,14 @@
-pipeline 
-{
+pipeline {
   agent any
-  
-  stages 
-  {
-    stage('build') 
-    {
-      steps 
-      {
-       node server.js  
+  stages {
+    stage('build') {
+      steps {
+        node(label: server.js) {
+          sh 'sh server.js'
+        }
+
       }
     }
+
   }
 }
- 
