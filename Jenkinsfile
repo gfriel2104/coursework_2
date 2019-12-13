@@ -8,7 +8,7 @@ pipeline
     {
       steps 
       {
-       sh 'server.js'    
+       node 'server.js'    
       }
     }    
   }
