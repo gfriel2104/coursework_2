@@ -20,8 +20,6 @@ node {
         {
             scannerHome = tool 'SonarQube'
         }
-        steps 
-        {
             withSonarQubeEnv('sonarqube') 
             {
                 sh "${scannerHome}/bin/sonar-scanner"
@@ -29,7 +27,6 @@ node {
             timeout(time: 10, unit: 'MINUTES') 
             {
                 waitForQualityGate abortPipeline: true
-            }
         }
     }
 
