@@ -14,7 +14,7 @@ node {
         app = docker.build("gfriel2104/coursework2")
     }
 
-    stage('Sonarqube') 
+    /*stage('Sonarqube') 
     {
         environment 
         {
@@ -28,7 +28,7 @@ node {
             {
                 waitForQualityGate abortPipeline: true
         }
-    }
+    }*/
 
     stage('Push image') {
         /* Finally, we'll push the image with two tags:
