@@ -6,7 +6,7 @@ node('master')
     {
       git url: 'git@github.com:gfriel2104/coursework_2.git'
       
-      sh "./develop server.js
+      sh 'server'
     }
    }
    
