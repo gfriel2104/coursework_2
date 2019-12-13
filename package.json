@@ -1,0 +1,21 @@
+{
+  "name": "coursework_2",
+  "version": "1.0.0",
+  "description": "Coursework 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfriel2104/coursework_2/"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "dockerfile"
+  ],
+  "author": "gary friel",
+  "license": "ISC"
+}
