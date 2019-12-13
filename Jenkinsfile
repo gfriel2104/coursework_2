@@ -8,14 +8,9 @@ pipeline
     {
       steps 
       {
-       sh 'npm install'  
+       node server.js  
       }
     }
-    stage('Test') { 
-            steps {
-                sh 'server.js' 
-            }
-        }
   }
 }
  
