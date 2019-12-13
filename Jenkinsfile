@@ -8,7 +8,7 @@ pipeline
     {
       steps 
       {
-       sh 'sudo server.js'    
+       sh 'server.js'    
       }
     }    
   }
