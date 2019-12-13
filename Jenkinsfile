@@ -1,31 +1,16 @@
-node('master') 
+pipeline 
 {
-  try 
+  agent any
+  
+  stages 
   {
     stage('build') 
     {
-      git url: 'git@github.com:gfriel2104/coursework_2.git'
-      
-      sh 'server'
-    }
-   }
-   
-   stage('Sonarqube') 
-   {
-      environment 
-      {
-          scannerHome = tool 'SonarQubeScanner'
-      }
       steps 
       {
-          withSonarQubeEnv('sonarqube') 
-          {
-              sh "${scannerHome}/bin/sonar-scanner"
-          }
-          timeout(time: 10, unit: 'MINUTES') 
-          {
-              waitForQualityGate abortPipeline: true
-          }
+       sh 'sudo server.js'    
       }
-    }
+    }    
+  }
 }
+ 
