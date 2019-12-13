@@ -8,9 +8,14 @@ pipeline
     {
       steps 
       {
-       echo  "Testing"  
+       sh 'npm install'  
       }
-    }    
+    }
+    stage('Test') { 
+            steps {
+                sh 'server.js' 
+            }
+        }
   }
 }
  
