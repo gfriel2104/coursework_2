@@ -8,7 +8,7 @@ pipeline
     {
       steps 
       {
-       node 'server.js'    
+       echo  "Testing"  
       }
     }    
   }
